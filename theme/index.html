@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <title>Punica Stone</title>
+    <link rel="shortcut icon" href="images/favicon.png">
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="css/open-sans.css">
+    <link type="text/css" rel="stylesheet" href="css/bootstrap-theme.css">
+    <link type="text/css" rel="stylesheet" href="css/responsive-theme.css">
+</head>
+<body>
+<div class="content">
+    <section id="top" class="section-right-border flex active">
+        <div class="flex-inner">
+            <div class="flex-col flex-stretch">
+                <div class="flex-column top-box order1">
+                    <div class="logo"></div>
+                </div>
+                <div class="flex-column top-box order2">
+                    <div class="flex">
+                        <div class="flex-inner">
+                            <ul class="nav navbar">
+                                <li><a href="#products">products<span>02</span></a></li>
+                                <li><a href="#projects">projects<span>03</span></a></li>
+                                <li><a href="#about">about us<span>01</span></a></li>
+                                <li><a href="#contact">contact us<span>04</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mouse-icon"></div>
+    </section>
+    <section id="about" class="section-right-border flex flex-left">
+        <div class="navigation">
+            <a class="ease-link navigation-link navigation-top">
+                about us
+                <span>01</span>
+            </a>
+        </div>
+        <div class="flex-inner">
+            <div class="flex-col">
+                <div class="about-box order1">
+                    <div class="about-image"></div>
+                </div>
+                <div class="about-box order2">
+                    <div class="flex flex-left">
+                        <div class="flex-inner">
+                            <h4 class="logo-title">
+                                Punica
+                                <small>Stone</small>
+                            </h4>
+                            <div class="text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="products" class="section-right-border flex">
+        <div class="flex-inner">
+            <div class="flex-col flex-stretch">
+                <div class="flex-column about-box order1">
+                    <div class="logo"></div>
+                </div>
+                <div class="flex-column about-box order2">
+                    <div class="flex">
+                        <div class="flex-inner">
+                            <ul class="nav navbar">
+                                <li><a href="#">products<span>02</span></a></li>
+                                <li><a href="#">projects<span>03</span></a></li>
+                                <li><a href="#">about us<span>01</span></a></li>
+                                <li><a href="#">contact us<span>04</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mouse-icon"></div>
+    </section>
+    <section id="projects" class="section-right-border flex">
+        <div class="flex-inner">
+            <div class="flex-col flex-stretch">
+                <div class="flex-column about-box order1">
+                    <div class="logo"></div>
+                </div>
+                <div class="flex-column about-box order2">
+                    <div class="flex">
+                        <div class="flex-inner">
+                            <ul class="nav navbar">
+                                <li><a href="#">products<span>02</span></a></li>
+                                <li><a href="#">projects<span>03</span></a></li>
+                                <li><a href="#">about us<span>01</span></a></li>
+                                <li><a href="#">contact us<span>04</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mouse-icon"></div>
+    </section>
+    <section id="contact" class="section-right-border flex">
+        <div class="flex-inner">
+            <div class="flex-col flex-stretch">
+                <div class="flex-column about-box order1">
+                    <div class="logo"></div>
+                </div>
+                <div class="flex-column about-box order2">
+                    <div class="flex">
+                        <div class="flex-inner">
+                            <ul class="nav navbar">
+                                <li><a href="#">products<span>02</span></a></li>
+                                <li><a href="#">projects<span>03</span></a></li>
+                                <li><a href="#">about us<span>01</span></a></li>
+                                <li><a href="#">contact us<span>04</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mouse-icon"></div>
+    </section>
+</div>
+
+
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/jquery.script.js"></script>
+<script type="text/javascript" src="js/parallax.min.js"></script>
+<script type="text/javascript" src="js/jquery.nicescroll.min.js"></script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDbhMDAxCreEWc5Due7477QxAVuBAJKdTM"></script>
+<script type="text/javascript">
+    var animationRunning= false;
+    $(function () {
+        $("body").on('click', '.navbar li a, .ease-link', function (e) {
+            e.preventDefault();
+            var href = $(this).attr('href'),
+                el = $(href);
+            if (href.substr(1, href.length))
+                $('html, body').animate({
+                    scrollTop: el.offset().top
+                }, 1000,function () {
+                    $("section.active").removeClass("active");
+                    el.addClass("active");
+                    animationRunning= false;
+                });
+        });
+    });
+
+    window.addEventListener('wheel', function(e) {
+        let el;
+        if (e.deltaY < 0)
+            el = $("section.active").prev("section");
+        else if (e.deltaY > 0)
+            el = $("section.active").next("section");
+        e.preventDefault();
+        e.stopPropagation();
+
+        if (!el.length) {
+            if (e.deltaY < 0)
+                el = $("#top");
+        }
+
+        if (animationRunning === false && el.length) {
+            animationRunning = true;
+            $('html, body').animate({
+                scrollTop: el.offset().top
+            }, 1000, function () {
+                $("section.active").removeClass("active");
+                el.addClass("active");
+                animationRunning = false;
+            });
+        }
+    });
+</script>
+</body>
+</html>
