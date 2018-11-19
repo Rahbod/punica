@@ -172,6 +172,9 @@ a:active {
     text-transform: uppercase;
     font-weight: 300;
 }
+.navigation-link:hover{
+    color: #fff;
+}
 .navigation-link:before{
     content: " ";
     position: absolute;
@@ -196,7 +199,7 @@ a:active {
     left: 30px;
     text-align: left;
 }
-.navigation-top{
+.navigation-bottom{
     bottom: 30px;
     right: 30px;
     text-align: left;
