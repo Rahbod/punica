@@ -6,10 +6,10 @@
     <div class="code"><?php echo $code; ?></div>
     <div class="title" dir="auto">
         <?php echo CHtml::encode($message);?>
-        <?php if(Yii::app()->request->hostInfo == 'http://localhost'):?>
-            <small style="display: block;margin-top: 40px;"><?= Yii::app()->errorHandler->error['file'] . '(' . Yii::app()->errorHandler->error['line'] . ')'?></small>
-        <?php endif;?>
     </div>
+    <?php if(Yii::app()->request->hostInfo == 'http://localhost'):?>
+        <small style="display: block;margin: 40px auto;text-align:center;direction: ltr;"><?= Yii::app()->errorHandler->error['file'] . '(' . Yii::app()->errorHandler->error['line'] . ')'?></small>
+    <?php endif;?>
 
     <div class="buttons">
         <div class="row">
@@ -21,17 +21,6 @@
             </div>
         </div>
     </div>
-
-    <!-- Copyright -->
-    <div class="copyright">
-        <div class="ltr">
-            <?php $this->renderPartial('//partial-views/_copyright');?>
-        </div>
-        <div>
-            <a href="<?php echo $this->createUrl('/help')?>">راهنما</a> / <a href="<?php echo $this->createUrl('/contact')?>">تماس با ما</a>
-        </div>
-    </div>
-    <!-- ./Copyright -->
 
 </div>
 <script>
