@@ -6,7 +6,7 @@ class ProductsManageController extends Controller
 	public $defaultAction = 'admin';
     public $imagePath = 'uploads/products';
     public $tempPath = 'uploads/temp';
-    public $imageOptions = ['resize' => ['width' => 500, 'height' => 500], 'thumbnail' => ['width' => 150, 'height' => 150]];
+    public $imageOptions = ['resize' => ['width' => 500, 'height' => 500], 'thumbnail' => ['width' => 300, 'height' => 300]];
 
     /**
      * @return array actions type list
