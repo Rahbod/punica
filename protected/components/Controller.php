@@ -112,20 +112,30 @@ class Controller extends AuthController
                     'url' => array('/admins/dashboard')
                 ),
                 array(
-                    'label' => '<i class="fa fa-dashboard"></i><span>تغییر قیمت ارز</span>',
-                    'url' => array('/setting/manage/changePrice')
-                ),
-                array(
-                    'label' => '<i class="fa fa-bars"></i><span>صفحات متنی</span> <i class="fa fa-angle-left pull-left"></i>',
+                    'label' => '<i class="fa fa-bars"></i><span>محصولات و پروژه ها</span> <i class="fa fa-angle-left pull-left"></i>',
                     'url' => '#',
                     'itemOptions' => array('class' => 'treeview', 'tabindex' => "-1"),
                     'submenuOptions' => array('class' => 'treeview-menu'),
                     'items' => array(
-                        array('label' => '<i class="fa fa-circle-o"></i>صفحات و متون اصلی', 'url' => Yii::app()->createUrl('/pages/manage/admin/slug/base')),
-                        array('label' => '<i class="fa fa-circle-o"></i>متون صفحه اصلی', 'url' => Yii::app()->createUrl('/pages/manage/admin/slug/index')),
+                        array('label' => '<i class="fa fa-circle-o"></i>مدیریت محصولات', 'url' => Yii::app()->createUrl('/products/manage/admin')),
+                        array('label' => '<i class="fa fa-circle-o"></i>مدیریت پروژه ها', 'url' => Yii::app()->createUrl('/projects/manage/admin')),
+                        array('label' => '<i class="fa fa-circle-o"></i>مدیریت دسته بندی ها', 'url' => Yii::app()->createUrl('/products/categories/admin')),
                     )
                 ),
-
+                array(
+                    'label' => '<i class="fa fa-home"></i><span>متون صفحه اصلی</span>',
+                    'url' => array('/pages/manage/admin/slug/index')
+                ),
+//                array(
+//                    'label' => '<i class="fa fa-bars"></i><span>صفحات متنی</span> <i class="fa fa-angle-left pull-left"></i>',
+//                    'url' => '#',
+//                    'itemOptions' => array('class' => 'treeview', 'tabindex' => "-1"),
+//                    'submenuOptions' => array('class' => 'treeview-menu'),
+//                    'items' => array(
+//                        array('label' => '<i class="fa fa-circle-o"></i>صفحات و متون اصلی', 'url' => Yii::app()->createUrl('/pages/manage/admin/slug/base')),
+//                        array('label' => '<i class="fa fa-circle-o"></i>متون صفحه اصلی', 'url' => Yii::app()->createUrl('/pages/manage/admin/slug/index')),
+//                    )
+//                ),
                 array(
                     'label' => '<i class="fa fa-support"></i><span>تماس با ما</span> <i class="fa fa-angle-left pull-left"></i>',
                     'url' => '#',
@@ -155,7 +165,6 @@ class Controller extends AuthController
                     'submenuOptions' => array('class' => 'treeview-menu'),
                     'items' => array(
                         array('label' => '<i class="fa fa-circle-o"></i>عمومی', 'url' => Yii::app()->createUrl('/setting/manage/changeSetting')),
-                        array('label' => '<i class="fa fa-circle-o"></i>فرم های حواله', 'url' => Yii::app()->createUrl('/setting/manage/forms')),
                         array('label' => '<i class="fa fa-circle-o"></i>نقشه گوگل', 'url' => Yii::app()->createUrl('/map/manage/update/1')),
                         array('label' => '<i class="fa fa-circle-o"></i>شبکه های اجتماعی', 'url' => Yii::app()->createUrl('/setting/manage/socialLinks')),
                     )

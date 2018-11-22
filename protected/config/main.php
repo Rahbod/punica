@@ -3,7 +3,7 @@ return array(
 //	'onBeginRequest'=>create_function('$event', 'return ob_start("ob_gzhandler");'),
 //	'onEndRequest'=>create_function('$event', 'return ob_end_flush();'),
 	'basePath' => dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
-	'name'=>'Naseem Exchange',
+	'name'=>'Punica',
 	'timeZone' => 'Asia/Tehran',
 	'theme' => 'abound',
 	'sourceLanguage' => '00',
@@ -20,6 +20,7 @@ return array(
 		'ext.dropZoneUploader.*',
 		'application.modules.pages.models.*',
 		'application.modules.setting.models.*',
+		'application.modules.products.models.*',
 	),
 
 	'modules'=>array(
@@ -38,6 +39,8 @@ return array(
 		'places',
         'contact',
         'map',
+        'products',
+        'projects',
 	),
 
 	// application components

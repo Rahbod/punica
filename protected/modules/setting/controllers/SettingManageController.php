@@ -20,7 +20,6 @@ class SettingManageController extends Controller
             'backend' => array(
                 'gatewaySetting',
                 'changeSetting',
-                'changePrice',
                 'forms',
                 'socialLinks'
             )
@@ -110,41 +109,6 @@ class SettingManageController extends Controller
         $criteria->addCondition('name NOT REGEXP \'\\([^\\)]*form_.*\\)\'');
         $model = SiteSetting::model()->findAll($criteria);
         $this->render('_general', array(
-            'model' => $model
-        ));
-    }
-
-
-
-    public function actionChangePrice()
-    {
-        if (isset($_POST['SiteSetting'])) {
-            if(isset($_POST['SiteSetting']['price']))
-                SiteSetting::setOption('price', $_POST['SiteSetting']['price']);
-            if(isset($_POST['SiteSetting']['foreign_price']))
-                SiteSetting::setOption('foreign_price', $_POST['SiteSetting']['foreign_price']);
-            Yii::app()->user->setFlash('success', 'اطلاعات با موفقیت ثبت شد.');
-            $this->refresh();
-        }
-        $this->render('_price');
-    }
-
-    public function actionForms()
-    {
-        if (isset($_POST['SiteSetting'])) {
-            foreach ($_POST['SiteSetting'] as $name => $value) {
-                $oldImage = SiteSetting::getOption($name);
-                $image = new UploadedFiles($this->formPath, $oldImage);
-                SiteSetting::setOption($name, $value);
-                $image->update($oldImage, $value, $this->tempPath);
-            }
-            Yii::app()->user->setFlash('success', 'اطلاعات با موفقیت ثبت شد.');
-            $this->refresh();
-        }
-        $criteria = new CDbCriteria();
-        $criteria->addCondition('name REGEXP \'\\([^\\)]*form_.*\\)\'');
-        $model = SiteSetting::model()->findAll($criteria);
-        $this->render('_forms', array(
             'model' => $model
         ));
     }
