@@ -19,6 +19,12 @@
         <?php echo $form->error($model,'title'); ?>
     </div>
 
+    <div class="form-group">
+        <?php echo $form->labelEx($model,'type'); ?>
+        <?php echo $form->dropDownList($model,'type',ProductCategories::$typeLabels, array('class' => 'form-control')); ?>
+        <?php echo $form->error($model,'type'); ?>
+    </div>
+
 	<div class="form-group buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'افزودن' : 'ویرایش',array('class' => 'btn btn-success')); ?>
 	</div>

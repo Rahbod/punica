@@ -21,7 +21,7 @@
 
     <div class="form-group">
         <?php echo $form->labelEx($model,'cat_id'); ?>
-        <?php echo $form->dropDownList($model,'cat_id', CHtml::listData(ProductCategories::model()->findAll(), 'id', 'title'),array('class' => 'form-control')); ?>
+        <?php echo $form->dropDownList($model,'cat_id', CHtml::listData(ProductCategories::model()->findAll('type = '.ProductCategories::TYPE_PROJECT), 'id', 'title'),array('class' => 'form-control')); ?>
         <?php echo $form->error($model,'cat_id'); ?>
     </div>
 

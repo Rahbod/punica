@@ -43,7 +43,17 @@ class SiteController extends Controller
     {
         Yii::app()->theme = "frontend";
         $this->layout = "public";
-        $this->render('index');
+
+        $pages = Pages::model()->findAllByAttributes(['category_id' => 2]);
+
+        $productCategories = ProductCategories::model()->findAll('type = :type', [':type' => ProductCategories::TYPE_PRODUCT]);
+        $projectCategories = ProductCategories::model()->findAll('type = :type', [':type' => ProductCategories::TYPE_PRODUCT]);
+
+        $this->render('index', [
+            'pages' => $pages,
+            'productCategories' => $productCategories,
+            'projectCategories' => $projectCategories,
+        ]);
     }
 
     /**

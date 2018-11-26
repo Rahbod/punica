@@ -24,6 +24,10 @@ $this->breadcrumbs=array(
                 'columns'=>array(
                     'title',
                     array(
+                        'name' => 'type',
+                        'value' => '$data->type == 0 ? "محصول" : "پروژه"'
+                    ),
+                    array(
                         'class'=>'CButtonColumn',
                         'template' => '{update}{delete}'
                     )

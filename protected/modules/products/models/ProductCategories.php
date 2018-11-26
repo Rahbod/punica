@@ -6,12 +6,21 @@
  * The followings are the available columns in table '{{product_categories}}':
  * @property string $id
  * @property string $title
+ * @property string $type
  *
  * The followings are the available model relations:
  * @property Products[] $products
  */
 class ProductCategories extends CActiveRecord
 {
+	const TYPE_PRODUCT = 0;
+	const TYPE_PROJECT = 1;
+
+    public static $typeLabels = [
+        self::TYPE_PRODUCT => 'محصول',
+        self::TYPE_PROJECT=> 'پروژه',
+    ];
+
 	/**
 	 * @return string the associated database table name
 	 */
@@ -29,9 +38,10 @@ class ProductCategories extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('title', 'length', 'max'=>255),
+			array('type', 'length', 'max'=>1),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, title', 'safe', 'on'=>'search'),
+			array('id, title, type', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -55,6 +65,7 @@ class ProductCategories extends CActiveRecord
 		return array(
 			'id' => 'ID',
 			'title' => 'عنوان',
+			'type' => 'نوع',
 		);
 	}
 
@@ -78,6 +89,7 @@ class ProductCategories extends CActiveRecord
 
 		$criteria->compare('id',$this->id,true);
 		$criteria->compare('title',$this->title,true);
+		$criteria->compare('type',$this->type,true);
 
 		$criteria->order = 'id DESC';
 

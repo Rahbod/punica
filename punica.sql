@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50714
 File Encoding         : 65001
 
-Date: 2018-11-19 20:15:28
+Date: 2018-11-26 18:38:00
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -28,7 +28,7 @@ CREATE TABLE `ym_admins` (
   PRIMARY KEY (`id`),
   KEY `role_id` (`role_id`) USING BTREE,
   CONSTRAINT `ym_admins_ibfk_1` FOREIGN KEY (`role_id`) REFERENCES `ym_admin_roles` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of ym_admins
@@ -117,7 +117,7 @@ CREATE TABLE `ym_contact_messages` (
   PRIMARY KEY (`id`),
   KEY `department_id` (`department_id`),
   CONSTRAINT `ym_contact_messages_ibfk_1` FOREIGN KEY (`department_id`) REFERENCES `ym_contact_department` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of ym_contact_messages
@@ -154,7 +154,7 @@ CREATE TABLE `ym_contact_replies` (
   PRIMARY KEY (`id`),
   KEY `message_id` (`message_id`),
   CONSTRAINT `ym_contact_replies_ibfk_1` FOREIGN KEY (`message_id`) REFERENCES `ym_contact_messages` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
 
 -- ----------------------------
 -- Records of ym_contact_replies
@@ -173,9 +173,9 @@ CREATE TABLE `ym_counter_save` (
 -- ----------------------------
 -- Records of ym_counter_save
 -- ----------------------------
-INSERT INTO `ym_counter_save` VALUES ('day_time', '2458442');
-INSERT INTO `ym_counter_save` VALUES ('counter', '4');
-INSERT INTO `ym_counter_save` VALUES ('yesterday', '1');
+INSERT INTO `ym_counter_save` VALUES ('day_time', '2458449');
+INSERT INTO `ym_counter_save` VALUES ('counter', '5');
+INSERT INTO `ym_counter_save` VALUES ('yesterday', '0');
 INSERT INTO `ym_counter_save` VALUES ('max_count', '1');
 INSERT INTO `ym_counter_save` VALUES ('max_time', '1540629000');
 
@@ -192,7 +192,7 @@ CREATE TABLE `ym_counter_users` (
 -- ----------------------------
 -- Records of ym_counter_users
 -- ----------------------------
-INSERT INTO `ym_counter_users` VALUES ('837ec5754f503cfaaee0929fd48974e7', '1542645883');
+INSERT INTO `ym_counter_users` VALUES ('837ec5754f503cfaaee0929fd48974e7', '1543244855');
 
 -- ----------------------------
 -- Table structure for ym_google_maps
@@ -225,7 +225,7 @@ CREATE TABLE `ym_pages` (
   `en_title` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `category_id` (`category_id`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of ym_pages
@@ -234,7 +234,7 @@ INSERT INTO `ym_pages` VALUES ('1', 'درباره ما', 'گروه صرافی ن
 INSERT INTO `ym_pages` VALUES ('2', 'ارسال حواله', 'لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است.لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است.لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است.', '1', 'transfer-bg.jpg', 'transfer form');
 INSERT INTO `ym_pages` VALUES ('3', 'شرایط و مقررات', '<p style=\"direction: ltr\">\r\n        <b>Refunds and cancellation</b><br>\r\n        REFUNDS OF PRINCIPAL AMOUNT and cancellation of the money transfer will be made upon Your written request if payment to the Receiver has not yet been made or credited at the time the request is processed\r\n        <br>\r\n        <br>\r\n        <b>Money transfer services</b><br>\r\n        Javadi Pty ltd provides money transfer services whereby you authorize us to transfer funds to a person overseas; and/or receive Funds from a person overseas\r\n        <br>\r\n        <br>\r\n        <b>Anti-Money Laundering</b><br>\r\n        Javadi Pty ltd are required by the Anti-Money Laundering and Counter-Terrorism Financing Act 2006 to verify your identity before we can provide you with financial products and services. Electronic verification allows us to verify your identity by using electronic tools and external data sources\r\n        <br>\r\n        <br>\r\n        <b>Customers privacy</b><br>\r\n        Due to Privacy Act, we are subjected to protect your privacy. It is our company’s Code Of Conduct to respect customers privacy\r\n        <br>\r\n        <br>\r\n        By sending information to us, you consent to your information being checked with the document issuer or official record holder. Javadi Pty ltd may ask for more information regarding your money transfer\r\n        Information\r\n        Javadi Pty ltd charges 15$ for under 1000$ transaction\r\n        Minimum charges\r\n        Javadi Pty ltd may refuse the payment order, if we cannot match the user’s name and address as provided to Javadi to your bank account or credit card details. In this case you may be liable for an administration charge, which will be deducted from your deposit\r\n        Refusing a payment order\r\n        You are responsible for ensuring the payment details you provide are accurate. Once payment instructions have been executed by Javadi Pty ltd transactions cannot be reversed and Javadi Pty ltd will not be liable in any way for any loss you suffer as a result of a transaction being carried out in accordance with your instructions\r\n        Responsibility\r\n        The offered rate is fixed for 1 hour until we receive a photo of your receipt\r\n        Rate Validity\r\n        After sending the receipt to us the rate is fixed and we will transfer the fund in destination with our agreed price in the day of deal. Please note that incase of market fluctuations the rate will not change in any circumstances\r\n        Fixed Rate Guarantee\r\n        In case of request for cancellation of the transfer 3% will be deducted from your fund, If we have not processed the transaction in destination country\r\n        Cancelation Fee\r\n        In case of deficiency of your documents we may refuse to provide you service without any penalty\r\n        Required Documents\r\n        Any mistake in providing information regarding the transaction from your side will not make Javadi Pty Ltd liable\r\n        Liability Policy\r\n        Funds less than 1,000 Australian Dollars subjected to $15 transfer fee\r\n        Transfer Fee\r\n        Your information – Your privacy\r\n        Your personal information is protected by the law\r\n        Privacy & Security\r\n        By sending information you consent to your information being checked with the document issuer or official record holder\r\n        Document Verification\r\n    </p>', '1', 'terms-bg.jpg', 'terms conditions');
 INSERT INTO `ym_pages` VALUES ('4', 'تماس با ما', ' ', '1', 'contact-bg.jpg', 'contact us');
-INSERT INTO `ym_pages` VALUES ('6', 'درباره ما', 'متن درباره ما', '2', null, null);
+INSERT INTO `ym_pages` VALUES ('6', 'درباره ما', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', '2', null, null);
 
 -- ----------------------------
 -- Table structure for ym_page_categories
@@ -276,7 +276,7 @@ CREATE TABLE `ym_products` (
 -- Records of ym_products
 -- ----------------------------
 INSERT INTO `ym_products` VALUES ('2', 'گرانیت', 'G10', '200 X 200 cm', 'MOl5b1542643808.png', '1542644565', '1', '0');
-INSERT INTO `ym_products` VALUES ('3', 'نمای ساختمان مجلس', null, null, 'qsqaF1542644563.png', '1542644565', '1', '1');
+INSERT INTO `ym_products` VALUES ('3', 'نمای ساختمان مجلس', null, null, 'qsqaF1542644563.png', '1542644565', '2', '1');
 
 -- ----------------------------
 -- Table structure for ym_product_categories
@@ -285,14 +285,15 @@ DROP TABLE IF EXISTS `ym_product_categories`;
 CREATE TABLE `ym_product_categories` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `title` varchar(255) COLLATE utf8_persian_ci DEFAULT NULL,
+  `type` int(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
 
 -- ----------------------------
 -- Records of ym_product_categories
 -- ----------------------------
-INSERT INTO `ym_product_categories` VALUES ('1', 'دسته یک');
-INSERT INTO `ym_product_categories` VALUES ('2', 'دسته دو');
+INSERT INTO `ym_product_categories` VALUES ('1', 'دسته یک', '0');
+INSERT INTO `ym_product_categories` VALUES ('2', 'دسته دو', '1');
 
 -- ----------------------------
 -- Table structure for ym_site_setting
@@ -330,7 +331,7 @@ CREATE TABLE `ym_tags` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `title` varchar(50) CHARACTER SET utf8 COLLATE utf8_persian_ci DEFAULT NULL COMMENT 'عنوان',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=654 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of ym_tags
@@ -371,7 +372,7 @@ CREATE TABLE `ym_users` (
   `auth_mode` varchar(50) NOT NULL DEFAULT 'site',
   PRIMARY KEY (`id`),
   KEY `role_id` (`role_id`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=90 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of ym_users

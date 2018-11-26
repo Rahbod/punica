@@ -26,7 +26,7 @@ $this->breadcrumbs=array(
                     array(
                         'header' => 'دسته بندی',
                         'value' => '$data->cat->title',
-                        'filter' => CHtml::activeDropDownList($model,'cat_id',CHtml::listData(ProductCategories::model()->findAll(), 'id', 'title'),array('prompt' => 'همه'))
+                        'filter' => CHtml::activeDropDownList($model,'cat_id',CHtml::listData(ProductCategories::model()->findAll('type = '.ProductCategories::TYPE_PROJECT), 'id', 'title'),array('prompt' => 'همه'))
                     ),
                     array(
                         'class'=>'CButtonColumn',
