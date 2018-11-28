@@ -18,9 +18,9 @@
                 <div class="flex">
                     <div class="flex-inner">
                         <ul class="nav navbar">
+                            <li><a href="#about">about us<span>01</span></a></li>
                             <li><a href="#products">products<span>02</span></a></li>
                             <li><a href="#projects">projects<span>03</span></a></li>
-                            <li><a href="#about">about us<span>01</span></a></li>
                             <li><a href="#contact">contact us<span>04</span></a></li>
                         </ul>
                     </div>

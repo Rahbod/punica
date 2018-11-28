@@ -86,10 +86,13 @@ $(function () {
             .data("gallery-id", "#"+$(this).parents(".item-carousel").attr("id"))
             .data("index", $(this).parents(".stone-item").index());
 
-        modal.find(".image-box").fadeOut(100, function() {
-            modal.find("img").attr('src', src);
-            modal.find(".detail-box").html(details);
-        }).fadeIn(100);
+        // modal.find(".image-box").fadeOut(100, function() {
+        //     modal.find("img").attr('src', src);
+        //     modal.find(".detail-box").html(details);
+        // }).fadeIn(100);
+
+        modal.find("img").attr('src', src);
+        modal.find(".detail-box").html(details);
 
         // disable buttons
         if($(this).parents(".stone-item").index() !== $(this).parents(".item-carousel").find('.stone-item').length-1)

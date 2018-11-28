@@ -172,15 +172,7 @@
         display: none;
     }
     .section-right-border:before{
-        left: 50%;
-        top: 0;
-        height: 194px;
-        width: 70vw;
-        -webkit-transform: translate(-50%,-184px);
-        -moz-transform: translate(-50%,-184px);
-        -ms-transform: translate(-50%,-184px);
-        -o-transform: translate(-50%,-184px);
-        transform: translate(-50%,-184px);
+        display: none;
     }
     .navigation-bottom.info,
     .navigation-top{

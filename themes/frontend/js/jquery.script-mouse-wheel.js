@@ -1,9 +1,9 @@
 $(function () {
-    if($(window).width() > 768)
+    if($(window).width() > 992)
         window.addEventListener('wheel', wheelListener);
 
     $(window).resize(function () {
-        if ($(window).width() > 768)
+        if ($(window).width() > 992)
             window.addEventListener('wheel', wheelListener);
         else
             window.removeEventListener('wheel', wheelListener);

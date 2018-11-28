@@ -292,7 +292,7 @@ section.height-auto{
     background-size: contain;
     display: inline-block;
     width: 30vw;
-    height: 75vh;
+    height: 70vh;
 }
 .logo-title{
     display: inline-block;
@@ -336,7 +336,7 @@ section.height-auto{
     display: block;
 }
 .navigation .nav.navbar.nav-left{
-    right: 30px;
+    right: 60px;
 }
 
 .navigation .nav  li a{
@@ -554,7 +554,7 @@ section.height-auto{
     transform: translateY(-50%);
     overflow: hidden;
     text-align: center;
-    max-height: 90vh;
+    max-height: 100vh;
 }
 #show-stone-modal .image-box img{
     display: inline-block;
@@ -583,6 +583,10 @@ section.height-auto{
     margin: 0;
     line-height: 16px;
     font-size: 12px;
+}
+
+#show-stone-modal .detail-box div:last-of-type{
+    height: 46px;
 }
 
 .stone-item .blue-box .item-category,
