@@ -47,13 +47,9 @@ class SiteController extends Controller
         $pages = Pages::model()->findAllByAttributes(['category_id' => 2]);
 
         $productCategories = ProductCategories::model()->findAll('type = :type', [':type' => ProductCategories::TYPE_PRODUCT]);
-        $projectCategories = ProductCategories::model()->findAll('type = :type', [':type' => ProductCategories::TYPE_PRODUCT]);
+        $projectCategories = ProductCategories::model()->findAll('type = :type', [':type' => ProductCategories::TYPE_PROJECT]);
 
-        $this->render('index', [
-            'pages' => $pages,
-            'productCategories' => $productCategories,
-            'projectCategories' => $projectCategories,
-        ]);
+        $this->render('index', compact('pages', 'productCategories', 'projectCategories'));
     }
 
     /**

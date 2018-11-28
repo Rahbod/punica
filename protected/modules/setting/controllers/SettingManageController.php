@@ -32,7 +32,7 @@ class SettingManageController extends Controller
     public function filters()
     {
         return array(
-            'checkAccess - upload, deleteUpload, uploadWord, uploadPdf, deleteForm',
+            'checkAccess - upload, deleteUpload, uploadMap, uploadQr, deleteMap, deleteQr',
         );
     }
     public function actions()
@@ -53,29 +53,36 @@ class SettingManageController extends Controller
                 'uploadDir' => '/uploads/banner/',
                 'storedMode' => 'field'
             ),
-            'uploadPdf' => array( // list image upload
+            'uploadMap' => array( // list image upload
                 'class' => 'ext.dropZoneUploader.actions.AjaxUploadAction',
-                'attribute' => 'form_pdf',
+                'attribute' => 'map_pic',
                 'rename' => 'random',
                 'validateOptions' => array(
-                    'acceptedTypes' => array('pdf')
+                    'acceptedTypes' => array('png', 'jpg', 'jpeg')
                 )
             ),
-            'uploadWord' => array( // list image upload
-                'class' => 'ext.dropZoneUploader.actions.AjaxUploadAction',
-                'attribute' => 'form_word',
-                'rename' => 'random',
-                'validateOptions' => array(
-                    'acceptedTypes' => array('doc', 'docx')
-                )
-            ),
-            'deleteForm' => array( // delete list image uploaded
+            'deleteMap' => array( // delete list image uploaded
                 'class' => 'ext.dropZoneUploader.actions.AjaxDeleteUploadedAction',
                 'modelName' => 'SiteSetting',
                 'attribute' => 'value',
-                'uploadDir' => "/$this->formPath/",
+                'uploadDir' => '/uploads/map/',
                 'storedMode' => 'field'
-            )
+            ),
+            'uploadQr' => array( // list image upload
+                'class' => 'ext.dropZoneUploader.actions.AjaxUploadAction',
+                'attribute' => 'qr_pic',
+                'rename' => 'random',
+                'validateOptions' => array(
+                    'acceptedTypes' => array('png', 'jpg', 'jpeg')
+                )
+            ),
+            'deleteQr' => array( // delete list image uploaded
+                'class' => 'ext.dropZoneUploader.actions.AjaxDeleteUploadedAction',
+                'modelName' => 'SiteSetting',
+                'attribute' => 'value',
+                'uploadDir' => '/uploads/qr/',
+                'storedMode' => 'field'
+            ),
         );
     }
 

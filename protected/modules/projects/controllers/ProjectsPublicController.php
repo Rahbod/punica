@@ -1,6 +1,6 @@
 <?php
 
-class ProductsPublicController extends Controller
+class ProjectsPublicController extends Controller
 {
 	public function actionIndex()
 	{

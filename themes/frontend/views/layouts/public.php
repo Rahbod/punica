@@ -39,6 +39,8 @@
 <body>
 <div class="content">
     <?php echo $content;?>
+    <?php $this->renderPartial('//partial-views/_footer') ?>
 </div>
+<?php $this->renderPartial('//partial-views/_popup') ?>
 </body>
 </html>

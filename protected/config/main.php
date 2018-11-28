@@ -21,6 +21,7 @@ return array(
 		'application.modules.pages.models.*',
 		'application.modules.setting.models.*',
 		'application.modules.products.models.*',
+		'application.modules.projects.models.*',
 	),
 
 	'modules'=>array(
@@ -74,6 +75,7 @@ return array(
 			'rules'=>array(
 				'/page/<title:(.*)>'=>'/pages/manage/view',
 				'/pages/<id:\d+>'=>'/pages/manage/view',
+				'<module:\w+>/more'=>'<module>/manage/more',
 				'<action:(about|contact|help|terms|search|faq)>' => 'site/<action>',
 				'<action:(logout|dashboard|googleLogin|login|register|changePassword|forgetPassword|profile|notifications|recoverPassword|bookmarks)>' => 'users/public/<action>',
 				'<module:\w+>/<id:\d+>'=>'<module>/public/view',
@@ -119,7 +121,7 @@ return array(
 			),
 		),
 		'clientScript'=>array(
-			'class'=>'ext.minScript.components.ExtMinScript',
+//			'class'=>'ext.minScript.components.ExtMinScript',
 			'coreScriptPosition' => CClientScript::POS_HEAD,
 			'defaultScriptFilePosition' => CClientScript::POS_END,
 		),

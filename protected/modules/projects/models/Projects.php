@@ -18,6 +18,13 @@
  */
 class Projects extends CActiveRecord
 {
+    const TYPE_PRODUCT = 0;
+    const TYPE_PROJECT = 1;
+
+    public static $typeLabels = [
+        self::TYPE_PRODUCT => 'محصول',
+        self::TYPE_PROJECT=> 'پروژه',
+    ];
 	/**
 	 * @return string the associated database table name
 	 */
@@ -101,9 +108,7 @@ class Projects extends CActiveRecord
 		$criteria->compare('image',$this->image,true);
 		$criteria->compare('date',$this->date,true);
 		$criteria->compare('cat_id',$this->cat_id,true);
-		$criteria->compare('type',$this->type);
-
-        $criteria->addCondition('type = 1');
+        $criteria->compare('type', self::TYPE_PROJECT);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -120,4 +125,15 @@ class Projects extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+
+    /**
+     * @return CDbCriteria
+     */
+    public static function validQuery($limit = false)
+    {
+        $criteria = (new CDbCriteria())->compare('type', self::TYPE_PROJECT);
+        if ($limit)
+            $criteria->limit = $limit;
+        return $criteria;
+    }
 }

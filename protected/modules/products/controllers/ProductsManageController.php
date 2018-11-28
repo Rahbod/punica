@@ -18,6 +18,7 @@ class ProductsManageController extends Controller
                 'create',
                 'update',
                 'admin',
+                'more',
                 'delete',
                 'upload',
                 'deleteUpload',
@@ -166,5 +167,15 @@ class ProductsManageController extends Controller
             echo CActiveForm::validate($model);
             Yii::app()->end();
         }
+    }
+
+    public function actionMore()
+    {
+        Yii::app()->theme = "frontend";
+        $this->layout = '//layouts/inner';
+
+        $categories = ProductCategories::model()->findAll('type = :type', [':type' => ProductCategories::TYPE_PRODUCT]);
+
+        $this->render('view_more', compact('categories'));
     }
 }

@@ -108,4 +108,9 @@ class ProductCategories extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+
+	public function getItemCount()
+    {
+        return Products::model()->countByAttributes(['cat_id' => $this->id, 'type' => $this->type]);
+    }
 }

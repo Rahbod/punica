@@ -2,8 +2,8 @@
 
 class ProjectsManageController extends Controller
 {
-	public $layout = '//layouts/column2';
-	public $defaultAction = 'admin';
+    public $layout = '//layouts/column2';
+    public $defaultAction = 'admin';
     public $imagePath = 'uploads/projects';
     public $tempPath = 'uploads/temp';
     public $imageOptions = ['resize' => ['width' => 500, 'height' => 500], 'thumbnail' => ['width' => 300, 'height' => 300]];
@@ -18,6 +18,7 @@ class ProjectsManageController extends Controller
                 'create',
                 'update',
                 'admin',
+                'more',
                 'delete',
                 'upload',
                 'deleteUpload',
@@ -97,7 +98,7 @@ class ProjectsManageController extends Controller
 
         $image = new UploadedFiles($this->imagePath, $model->image, $this->imageOptions);
         if (isset($_POST['Projects'])) {
-            $oldImage= $model->image;
+            $oldImage = $model->image;
             $model->attributes = $_POST['Projects'];
             if ($model->save()) {
                 $image->update($oldImage, $model->image, $this->tempPath);
@@ -112,20 +113,20 @@ class ProjectsManageController extends Controller
         ));
     }
 
-	/**
-	 * Manages all models.
-	 */
-	public function actionAdmin()
-	{
-		$model = new Projects('search');
-		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['Projects']))
-			$model->attributes = $_GET['Projects'];
+    /**
+     * Manages all models.
+     */
+    public function actionAdmin()
+    {
+        $model = new Projects('search');
+        $model->unsetAttributes();  // clear any default values
+        if (isset($_GET['Projects']))
+            $model->attributes = $_GET['Projects'];
 
-		$this->render('admin', array(
-			'model' => $model,
-		));
-	}
+        $this->render('admin', array(
+            'model' => $model,
+        ));
+    }
 
     /**
      * Deletes a particular model.
@@ -134,10 +135,10 @@ class ProjectsManageController extends Controller
      */
     public function actionDelete($id)
     {
-        if($id != Yii::app()->user->id)
+        if ($id != Yii::app()->user->id)
             $this->loadModel($id)->delete();
         // if AJAX request (triggered by deletion via admin grid views), we should not redirect the browser
-        if(!isset($_GET['ajax']))
+        if (!isset($_GET['ajax']))
             $this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
     }
 
@@ -150,9 +151,9 @@ class ProjectsManageController extends Controller
      */
     public function loadModel($id)
     {
-        $model=Projects::model()->findByAttributes(['id' => $id, 'type' => 1]);
-        if($model===null)
-            throw new CHttpException(404,'The requested page does not exist.');
+        $model = Projects::model()->findByAttributes(['id' => $id, 'type' => 1]);
+        if ($model === null)
+            throw new CHttpException(404, 'The requested page does not exist.');
         return $model;
     }
 
@@ -162,9 +163,19 @@ class ProjectsManageController extends Controller
      */
     protected function performAjaxValidation($model)
     {
-        if(isset($_POST['ajax']) && $_POST['ajax'] === 'projects-form'){
+        if (isset($_POST['ajax']) && $_POST['ajax'] === 'projects-form') {
             echo CActiveForm::validate($model);
             Yii::app()->end();
         }
+    }
+
+    public function actionMore()
+    {
+        Yii::app()->theme = "frontend";
+        $this->layout = '//layouts/inner';
+
+        $categories = ProductCategories::model()->findAll('type = :type', [':type' => ProductCategories::TYPE_PROJECT]);
+
+        $this->render('view_more', compact('categories'));
     }
 }

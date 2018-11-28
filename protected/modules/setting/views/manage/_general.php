@@ -86,7 +86,35 @@
                             ',
                     )); ?>
                     <div class="uploader-map-message error"></div>
-                    <p><small>اندازه مناسب 900 در 380 می باشد.</small></p>
+                    <p><small>اندازه مناسب 1600 در 400 می باشد.</small></p>
+                </div>
+            <?php elseif($field->name == 'qr_pic'):?>
+                <div class="form-group">
+                    <?php echo CHtml::label($field->title,''); ?><br>
+                    <?php $this->widget('ext.dropZoneUploader.dropZoneUploader', array(
+                        'id' => 'uploaderQr',
+                        'model' => $field,
+                        'name' => 'qr_pic',
+                        'maxFiles' => 1,
+                        'maxFileSize' => 0.1, //MB
+                        'url' => $this->createUrl('uploadQr'),
+                        'deleteUrl' => $this->createUrl('deleteQr'),
+                        'acceptedFiles' => '.jpg, .jpeg, .png',
+                        'serverFiles' => $field->value ? new UploadedFiles('uploads/qr', $field->value) : [],
+                        'onSuccess' => '
+                            var responseObj = JSON.parse(res);
+                            if(responseObj.status){
+                                {serverName} = responseObj.fileName;
+                                $(".uploader-qr-message").html("");
+                            }
+                            else{
+                                $(".uploader-qr-message").html(responseObj.message);
+                                this.removeFile(file);
+                            }
+                        ',
+                    )); ?>
+                    <div class="uploader-qr-message error"></div>
+                    <p><small>اندازه مناسب 120 در 120 می باشد.</small></p>
                 </div>
             <?php else:?>
                 <div class="form-group">
