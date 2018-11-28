@@ -231,11 +231,24 @@ section.height-auto{
     left: 0;
     font-weight: bold;
 }
+.navigation-link.left{
+    text-align: right;
+    color: #444 !important;
+    font-weight: 400;
+}
+.navigation-link.left span{
+    color: #797979 !important;
+}
+.navigation-link.left:before{
+    background-color: #797979 !important;
+    left: auto;
+    right: 0;
+}
 .navigation-link span{
     margin-top: 8px;
     display: block;
     color: #158bcb;
-    font-size: 15px;
+    font-size: 13px;
     font-family: 'Open Sans';
     font-weight: 700;
     line-height: 16px;
@@ -249,6 +262,10 @@ section.height-auto{
     bottom: 30px;
     right: 60px;
     text-align: left;
+}
+.navigation-bottom.left{
+    left: 60px;
+    right: auto;
 }
 .mouse-icon {
     display: inline-block;
@@ -275,7 +292,7 @@ section.height-auto{
     background-size: contain;
     display: inline-block;
     width: 30vw;
-    height: 80vh;
+    height: 75vh;
 }
 .logo-title{
     display: inline-block;
@@ -799,6 +816,7 @@ section.height-auto{
     text-align: left;
     width: 90%;
     max-width: 1000px;
+    z-index: 2;
 }
 .contact-form .left-box{
     width: 80%;
@@ -1122,4 +1140,35 @@ section.height-auto .navigation .navigation-link.navigation-top:after{
     right: 35px;
     top: 30px;
     z-index: 101;
+}
+
+.map-box > a{
+    position: relative;
+    display: block;
+    overflow: hidden;
+    width: 100%;
+}
+.map-box > a:before{
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    content: "Click to see";
+    background-color: rgba(0,0,0,0.4);
+    text-align: center;
+    color: #eee;
+    font-weight: 800;
+    font-size: 60px;
+    text-transform: none;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+.map-box > a:hover:before{
+    opacity: 1;
 }

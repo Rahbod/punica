@@ -3,4 +3,3 @@ Disallow:
 Disallow: /cgi-bin/
 Disallow: /admins/*
 Disallow: /dashboard
-Disallow: /sell

@@ -58,6 +58,10 @@
         </div>
     </div>
     <div class="navigation">
+        <a class="navigation-link navigation-bottom left ease-link" href="#top">
+            punica stone
+            <span>home</span>
+        </a>
         <a class="navigation-link navigation-bottom ease-link" href="#products">
             products
             <span>next / 02</span>
@@ -102,6 +106,10 @@
         </div>
     </div>
     <div class="navigation">
+        <a class="navigation-link navigation-bottom left ease-link" href="#about">
+            about
+            <span>previous / 01</span>
+        </a>
         <a class="navigation-link navigation-bottom ease-link" href="#projects">
             projects
             <span>next / 03</span>
@@ -150,6 +158,10 @@
         </div>
     </div>
     <div class="navigation">
+        <a class="navigation-link navigation-bottom left ease-link" href="#products">
+            products
+            <span>previous / 02</span>
+        </a>
         <a class="navigation-link navigation-bottom ease-link" href="#contact">
             contact us
             <span>next / 04</span>

@@ -133,12 +133,11 @@
         text-align: center;
         padding-top: 300px;
     }
-    .map-box > img{
+    .map-box > a > img{
         height: 300px;
         position: absolute;
         left: 50%;
         top: 0;
-        height: 300px;
         -webkit-transform: translateX(-50%);
         -moz-transform: translateX(-50%);
         -ms-transform: translateX(-50%);
@@ -189,6 +188,10 @@
     }
     .navigation-bottom{
         right: 10px;
+    }
+    .navigation-bottom.left{
+        left: 10px;
+        right: auto;
     }
     .navigation-back,
     .menu-trigger{
@@ -271,6 +274,10 @@
     .navigation-bottom{
         right: 15px;
     }
+    .navigation-bottom.left{
+        right: auto;
+        left: 15px;
+    }
     .logo-title{
         font-size: 50px;
     }
@@ -309,6 +316,10 @@
     .navigation-bottom{
         right: 30px;
     }
+    .navigation-bottom.left{
+        left: 30px;
+        right: auto;
+    }
     .about-image{
         background-size: contain;
         width: 20vw;
@@ -341,3 +352,9 @@
     }
 }
 @media (min-width: 1200px){}
+@media (max-height: 600px){
+    .item-carousel .stone-item img{
+        width: 200px;
+        height: 200px;
+    }
+}

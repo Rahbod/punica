@@ -27,7 +27,7 @@ $clearMobile=str_replace(array(' ', '[', ']'), '', $mobile);
     <div class="flex-inner">
         <div class="flex-col">
             <div class="map-box">
-                <a href="<?= SiteSetting::getOption('map_link') ?>"><img src="<?= $url.SiteSetting::getOption('map_pic') ?>"></a>
+                <a target="_blank" href="<?= SiteSetting::getOption('map_link') ?>"><img src="<?= $url.SiteSetting::getOption('map_pic') ?>"></a>
                 <div class="inner-container contact-form">
                     <div class="inner-box">
                         <header>
@@ -76,7 +76,7 @@ $clearMobile=str_replace(array(' ', '[', ']'), '', $mobile);
     <div class="navigation">
         <div class="navigation-bottom info">
             <div class="address-box">
-                <span class="address-title">address</span><br><a href="#" class="address">no.1, 2 amirlkabir blvd, omid ind city. qom-iran</a>
+                <span class="address-title">address</span><br><a target="_blank" href="http://maps.google.com/?q=<?= urlencode(SiteSetting::getOption('address')) ?>" class="address"><?= SiteSetting::getOption('address') ?></a>
             </div>
             <div class="detail-box">
                 <ul>

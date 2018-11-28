@@ -2,15 +2,15 @@
 Navicat MySQL Data Transfer
 
 Source Server         : localhost
-Source Server Version : 50714
+Source Server Version : 50719
 Source Host           : localhost:3306
 Source Database       : punica
 
 Target Server Type    : MYSQL
-Target Server Version : 50714
+Target Server Version : 50719
 File Encoding         : 65001
 
-Date: 2018-11-26 18:38:00
+Date: 2018-11-28 19:18:50
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -173,9 +173,9 @@ CREATE TABLE `ym_counter_save` (
 -- ----------------------------
 -- Records of ym_counter_save
 -- ----------------------------
-INSERT INTO `ym_counter_save` VALUES ('day_time', '2458449');
-INSERT INTO `ym_counter_save` VALUES ('counter', '5');
-INSERT INTO `ym_counter_save` VALUES ('yesterday', '0');
+INSERT INTO `ym_counter_save` VALUES ('day_time', '2458451');
+INSERT INTO `ym_counter_save` VALUES ('counter', '7');
+INSERT INTO `ym_counter_save` VALUES ('yesterday', '1');
 INSERT INTO `ym_counter_save` VALUES ('max_count', '1');
 INSERT INTO `ym_counter_save` VALUES ('max_time', '1540629000');
 
@@ -192,7 +192,7 @@ CREATE TABLE `ym_counter_users` (
 -- ----------------------------
 -- Records of ym_counter_users
 -- ----------------------------
-INSERT INTO `ym_counter_users` VALUES ('837ec5754f503cfaaee0929fd48974e7', '1543244855');
+INSERT INTO `ym_counter_users` VALUES ('837ec5754f503cfaaee0929fd48974e7', '1543416301');
 
 -- ----------------------------
 -- Table structure for ym_google_maps
@@ -275,8 +275,8 @@ CREATE TABLE `ym_products` (
 -- ----------------------------
 -- Records of ym_products
 -- ----------------------------
-INSERT INTO `ym_products` VALUES ('2', 'گرانیت', 'G10', '200 X 200 cm', 'MOl5b1542643808.png', '1542644565', '1', '0');
-INSERT INTO `ym_products` VALUES ('3', 'نمای ساختمان مجلس', null, null, 'qsqaF1542644563.png', '1542644565', '2', '1');
+INSERT INTO `ym_products` VALUES ('2', 'Granit', 'G10', '200x200 cm', '0RCof1543338331.png', '1542644565', '1', '0');
+INSERT INTO `ym_products` VALUES ('3', 'Department', null, null, 'u4GMo1543340077.png', '1542644565', '2', '1');
 
 -- ----------------------------
 -- Table structure for ym_product_categories
@@ -292,8 +292,8 @@ CREATE TABLE `ym_product_categories` (
 -- ----------------------------
 -- Records of ym_product_categories
 -- ----------------------------
-INSERT INTO `ym_product_categories` VALUES ('1', 'دسته یک', '0');
-INSERT INTO `ym_product_categories` VALUES ('2', 'دسته دو', '1');
+INSERT INTO `ym_product_categories` VALUES ('1', 'Traviane', '0');
+INSERT INTO `ym_product_categories` VALUES ('2', 'Luxury', '1');
 
 -- ----------------------------
 -- Table structure for ym_site_setting
@@ -305,7 +305,7 @@ CREATE TABLE `ym_site_setting` (
   `title` varchar(255) CHARACTER SET utf8 COLLATE utf8_persian_ci NOT NULL,
   `value` text CHARACTER SET utf8 COLLATE utf8_persian_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=112 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=115 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of ym_site_setting
@@ -315,13 +315,14 @@ INSERT INTO `ym_site_setting` VALUES ('2', 'default_title', 'عنوان پیش �
 INSERT INTO `ym_site_setting` VALUES ('3', 'keywords', 'کلمات کلیدی سایت', '[\"\"]');
 INSERT INTO `ym_site_setting` VALUES ('4', 'site_description', 'شرح وبسایت', '');
 INSERT INTO `ym_site_setting` VALUES ('5', 'social_links', 'شبکه های اجتماعی', '{\"whatsapp\":\"http:\\/\\/https:\\/whatsapp.com\",\"facebook\":\"http:\\/\\/facebook.com\",\"telegram\":\"http:\\/\\/telegram.me\",\"instagram\":\"https:\\/\\/instagram.com\\/naseemexchange\",\"twitter\":\"http:\\/\\/twitter.com\"}');
-INSERT INTO `ym_site_setting` VALUES ('6', 'banner_', 'تصویر', 'bg.jpg');
-INSERT INTO `ym_site_setting` VALUES ('7', 'price', 'مبلغ استرالیا به ایران', '9100');
-INSERT INTO `ym_site_setting` VALUES ('8', 'tel', 'شماره تماس', '433 347 481');
-INSERT INTO `ym_site_setting` VALUES ('9', 'mobile', 'موبایل', '09123456789');
+INSERT INTO `ym_site_setting` VALUES ('114', 'qr_pic', 'تصویر qr کد', 'qr.png');
+INSERT INTO `ym_site_setting` VALUES ('8', 'phone', 'شماره تماس', '[+98 25] 33443353');
+INSERT INTO `ym_site_setting` VALUES ('9', 'mobile', 'موبایل', '+98 912 651 5033');
 INSERT INTO `ym_site_setting` VALUES ('10', 'address', 'آدرس', 'تهران: سعدی شمالی، بعد از چهارراه منوچهری، پلاک 528');
 INSERT INTO `ym_site_setting` VALUES ('11', 'postal_code', 'کد پستی', '37188 88888');
-INSERT INTO `ym_site_setting` VALUES ('12', 'master_email', 'پست الکترونیک وبسایت', '');
+INSERT INTO `ym_site_setting` VALUES ('12', 'master_email', 'پست الکترونیک وبسایت', 'info@punicastone.com');
+INSERT INTO `ym_site_setting` VALUES ('112', 'map_pic', 'تصویر نقشه', 'map.png');
+INSERT INTO `ym_site_setting` VALUES ('113', 'map_link', 'آدرس نقشه', 'https://www.google.com/maps/place/35%C2%B043\'38.7%22N+51%C2%B029\'36.0%22E/@35.727418,51.493342,16z/data=!4m5!3m4!1s0x0:0x0!8m2!3d35.727418!4d51.493342');
 
 -- ----------------------------
 -- Table structure for ym_tags
