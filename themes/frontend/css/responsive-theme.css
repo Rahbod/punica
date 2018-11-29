@@ -40,6 +40,9 @@
     }
 }
 @media screen and (max-width: 768px){
+    #top{
+        display: flex !important;
+    }
     .navigation,
     .flex{
         display: inline-block !important;
@@ -61,6 +64,9 @@
         min-height: 100vh;
         padding: 15px;
         height: auto!important;
+    }
+    #contact .navigation .navigation-top{
+        left: 0;
     }
     .contact-form .inner-box .form-group{
         width: 50%;
@@ -133,7 +139,7 @@
         text-align: center;
         padding-top: 300px;
     }
-    .map-box > a > img{
+    .map-box > a{
         height: 300px;
         position: absolute;
         left: 50%;
@@ -144,14 +150,64 @@
         -o-transform: translateX(-50%);
         transform: translateX(-50%);
     }
+    .map-box > a:before{
+        content: "Touch to see";
+        font-size: 50px;
+        opacity: 1;
+    }
     .navigation-bottom,
     .contact-form{
         display: inline-block;
         position: relative;
         width: 100%;
     }
-    #show-stone-modal .detail-box .blue-box{
-        display: none;
+    #show-stone-modal .detail-box{
+
+    }
+    #show-stone-modal .image-box {
+        display: inline-block;
+        position: absolute;
+        left: 0;
+        bottom: 80px;
+        right: 0;
+        top: 0;
+        overflow: visible;
+        transform: none !important;
+    }
+    #show-stone-modal .modal-dialog{
+        height: 100%;
+    }
+    #show-stone-modal,
+    #show-stone-modal .modal-body{
+        top: auto;
+        bottom: 0;
+        height: 100%;
+        overflow: hidden !important;
+    }
+    #show-stone-modal .image-box img{
+        position: absolute;
+        bottom: 0;
+        transform: none !important;
+        left: 0;
+    }
+    #show-stone-modal .detail-box {
+        position: absolute;
+        bottom: -80px;
+        right: 0;
+        border-radius: 0;
+        left: 0;
+        height: 80px;
+        top: auto;
+    }
+    .logo-modal{
+        right: 0;
+    }
+    .logo-modal.logo-fade{
+        top: auto;
+        bottom: 0;
+        height: 50%;
+        background-size: 80% auto;
+        background-position: center bottom;
     }
     #show-stone-modal .navigation .next{
         right: 25px;
@@ -344,7 +400,7 @@
     }
 }
 @media (min-width: 1200px){}
-@media (max-height: 600px){
+@media (max-height: 600px) and (min-width: 768px){
     .item-carousel .stone-item img{
         width: 200px;
         height: 200px;

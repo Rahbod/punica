@@ -2,12 +2,15 @@
 /** @var $this ProjectsManageController */
 /** @var $categories Projects[] */
 ?>
+<div class="header">
+    <a class="navigation-back" href="<?= Yii::app()->getBaseUrl(true).'#projects' ?>">
+        <span><i class="arrow-icon"></i></span>
+        <span>back</span>
+    </a>
+</div>
+
 <section class="height-auto active">
     <div class="navigation inner">
-        <a class="navigation-back" href="<?= Yii::app()->getBaseUrl(true).'#projects' ?>">
-            <span><i class="arrow-icon"></i></span>
-            <span>back</span>
-        </a>
         <a class="navigation-link navigation-top">
             projects
             <span>view more</span>

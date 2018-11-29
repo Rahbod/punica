@@ -14,7 +14,7 @@
             <div class="flex-column top-box order1">
                 <div class="logo"></div>
             </div>
-            <div class="flex-column top-box order2">
+            <div class="flex-column top-box order2 hidden-xs">
                 <div class="flex">
                     <div class="flex-inner">
                         <ul class="nav navbar">

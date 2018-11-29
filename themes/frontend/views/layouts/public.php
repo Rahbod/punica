@@ -22,22 +22,34 @@
     Yii::app()->clientScript->registerCoreScript('jquery');
 
     $cs->registerCssFile($baseUrl.'/css/bootstrap.min.css');
-    $cs->registerCssFile($baseUrl.'/css/font-awesome.css?2'.time());
-    $cs->registerCssFile($baseUrl.'/css/owl.carousel.min.css?2'.time());
-    $cs->registerCssFile($baseUrl.'/css/owl.theme.default.min.css?2'.time());
-    $cs->registerCssFile($baseUrl.'/css/open-sans.css?2'.time());
-    $cs->registerCssFile($baseUrl.'/css/bootstrap-theme.css?2'.time());
-    $cs->registerCssFile($baseUrl.'/css/responsive-theme.css?2'.time());
+    $cs->registerCssFile($baseUrl.'/css/font-awesome.css?2.9'.time());
+    $cs->registerCssFile($baseUrl.'/css/owl.carousel.min.css?2.9'.time());
+    $cs->registerCssFile($baseUrl.'/css/owl.theme.default.min.css?2.9'.time());
+    $cs->registerCssFile($baseUrl.'/css/open-sans.css?2.9'.time());
+    $cs->registerCssFile($baseUrl.'/css/bootstrap-theme.css?2.9'.time());
+    $cs->registerCssFile($baseUrl.'/css/responsive-theme.css?2.9'.time());
 
     $cs->registerScriptFile($baseUrl.'/js/bootstrap.min.js', CClientScript::POS_END);
     $cs->registerScriptFile($baseUrl.'/js/jquery.nicescroll.min.js', CClientScript::POS_END);
     $cs->registerScriptFile($baseUrl.'/js/owl.carousel.min.js', CClientScript::POS_END);
-    $cs->registerScriptFile($baseUrl.'/js/jquery.script-mouse-wheel.js?2'.time(), CClientScript::POS_END);
-    $cs->registerScriptFile($baseUrl.'/js/jquery.script.js?2'.time(), CClientScript::POS_END);
+    $cs->registerScriptFile($baseUrl.'/js/jquery.script-mouse-wheel.js?2.9'.time(), CClientScript::POS_END);
+    $cs->registerScriptFile($baseUrl.'/js/jquery.script.js?2.9'.time(), CClientScript::POS_END);
     ?>
 </head>
 <body>
 <div class="content">
+    <div class="visible-xs header">
+        <div class="logo-modal"></div>
+        <div class="nav-trigger">
+            <a class="nav-icon" href="#"></a>
+        </div>
+        <ul class="nav navbar">
+            <li><a href="#about">about us<span>01</span></a></li>
+            <li><a href="#products">products<span>02</span></a></li>
+            <li><a href="#projects">projects<span>03</span></a></li>
+            <li><a href="#contact">contact us<span>04</span></a></li>
+        </ul>
+    </div>
     <?php echo $content;?>
     <?php $this->renderPartial('//partial-views/_footer') ?>
 </div>
