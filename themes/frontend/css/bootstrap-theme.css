@@ -1148,6 +1148,7 @@ section.height-auto .navigation .navigation-link.navigation-top:after{
     transition: all 0.2s ease-in-out;
 }
 .header.open .nav-trigger{
+    transition-delay: 0.4s;
     background: url("../svg/cancel-white.svg") no-repeat right center;
     background-size: 30px;
     width: 60px;

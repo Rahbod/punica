@@ -219,6 +219,8 @@ $(function () {
             if (($(this).offset().top - gap) < window.pageYOffset
                 && ($(this).offset().top - gap) + $(this).height() > window.pageYOffset
             ) {
+                $("section.active").removeClass("active");
+                $(this).addClass("active");
                 history.replaceState(null, null, ('#'+$(this).attr('id')));
                 // window.location.hash = $(this).attr('id');
             }

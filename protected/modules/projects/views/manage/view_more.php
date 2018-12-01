@@ -8,7 +8,6 @@
         <span>back</span>
     </a>
 </div>
-
 <section class="height-auto active">
     <div class="navigation inner">
         <a class="navigation-link navigation-top">
