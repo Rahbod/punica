@@ -46,6 +46,21 @@
         text-align: left;
         padding-top: 15px;
     }
+    section.flex{
+        min-height: 100vh;
+        height: auto;
+        padding: 0 0 100px;
+    }
+    .flex-inner{
+        padding-top: 50px;
+    }
+    #contact .flex-inner{
+        padding-top: 0;
+    }
+    .item-carousel{
+        height: auto;
+        display: inline-block;
+    }
     .top-box{
         max-width: 100%;
         text-align: center;

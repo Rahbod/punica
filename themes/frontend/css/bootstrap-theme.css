@@ -6,8 +6,11 @@ html{
     overflow-x: hidden;
 }
 
+*{
+    font-family: "Open Sans";
+}
 body {
-    font-family: 'Open Sans', IRANSans;
+    font-family: "Open Sans";
     font-size: 13px;
     background-color: #030000;
     color: #fff;
@@ -293,6 +296,9 @@ section.height-auto{
     background-color: #797979 !important;
     left: auto;
     right: 0;
+}
+.navigation .ease-link:hover{
+    opacity: 0.7;
 }
 .navigation-link span{
     margin-top: 8px;
@@ -821,7 +827,8 @@ section.height-auto{
     color: #818181 !important;
 }
 
-.social-nav [class*="-icon"]{
+.social-nav [class*="-icon"],
+.social-nav [class*="icon-"]{
     display: inline-block;
     width: 24px;
     height: 24px;
@@ -1340,11 +1347,40 @@ section.height-auto .navigation .navigation-link.navigation-top:after{
 }
 
 
-.navigation-top.right{
-    right: 60px;
-    left: auto;
+.top-link{
+    position: relative;
+    padding-right: 15px;
+}
+.top-link ul{
+    margin: 5px -12px;
+}
+.top-link ul li{
+    float: left;
+    font-size: 11px !important;
+    border-right: 2px solid #7f7f7f;
+}
+.top-link ul li a{
+    color: #7f7f7f !important;
+    padding-right: 10px;
+    font-weight: bold;
+}
+.top-link ul li a:hover{
+    color: #444 !important;
+}
+.top-link > div > a{
+    color: #444 !important;
+}
+.top-link > div > a:hover{
+    color: #7f7f7f !important;
+}
+.top-link ul li:last-of-type{
+    border: none;
 }
 .navigation-top.right{
+    position: relative;
+    top: -8px;
+    right: 0;
+    left: auto;
     text-align: right;
     color: #444 !important;
     font-weight: 400;

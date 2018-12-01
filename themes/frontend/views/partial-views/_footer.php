@@ -16,20 +16,22 @@ $clearMobile=str_replace(array(' ', '[', ']'), '', $mobile);
             contact us
             <span>04</span>
         </a>
-<!--        <div class="navigation-link navigation-top right">-->
-<!--            <a class="ease-link" href="#top">Home</a>-->
-<!--            <ul>-->
-<!--                <li><a class="ease-link" href="#about">about us</a></li>-->
-<!--                <li><a class="ease-link" href="#products">products</a></li>-->
-<!--                <li><a class="ease-link" href="#projects">projects</a></li>-->
-<!--            </ul>-->
-<!--        </div>-->
         <ul class="social-nav nav-left">
             <li><a href="#"><span>@punica.stone</span></a></li>
             <li><a href="#"><i class="facebook-icon"></i></a></li>
             <li><a href="#"><i class="instagram-icon"></i></a></li>
             <li><a href="#"><i class="whatsapp-icon"></i><span>+98 902 253 9393</span></a></li>
             <li><a href="#"><i class="telegram-icon"></i></a></li>
+            <li class="top-link">
+                <div class="navigation-link navigation-top right">
+                    <a class="ease-link" href="#top">Home</a>
+                    <ul>
+                        <li><a class="ease-link" href="#about">about us</a></li>
+                        <li><a class="ease-link" href="#products">products</a></li>
+                        <li><a class="ease-link" href="#projects">projects</a></li>
+                    </ul>
+                </div>
+            </li>
         </ul>
     </div>
     <div class="flex-inner">
