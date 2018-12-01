@@ -39,7 +39,6 @@
 <body>
 <div class="content">
     <div class="visible-xs header">
-        <div class="logo-modal"></div>
         <div class="nav-trigger">
             <a class="nav-icon" href="#"></a>
         </div>

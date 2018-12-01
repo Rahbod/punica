@@ -31,10 +31,6 @@
     #top .nav{
         padding-top: 30px;
     }
-    .nav li a small,
-    .nav li a span{
-        opacity: 1;
-    }
     .mouse-icon{
         display: none;
     }

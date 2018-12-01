@@ -18,10 +18,10 @@
                 <div class="flex">
                     <div class="flex-inner">
                         <ul class="nav navbar">
-                            <li><a href="#about">about us<span>01</span></a></li>
-                            <li><a href="#products">products<span>02</span></a></li>
-                            <li><a href="#projects">projects<span>03</span></a></li>
-                            <li><a href="#contact">contact us<span>04</span></a></li>
+                            <li><a href="#about" data-number="01"><span data-hover="about us">about us</span></a></li>
+                            <li><a href="#products" data-number="02"><span data-hover="products">products</span></a></li>
+                            <li><a href="#projects" data-number="03"><span data-hover="projects">projects</span></a></li>
+                            <li><a href="#contact" data-number="04"><span data-hover="contact us">contact us</span></a></li>
                         </ul>
                     </div>
                 </div>
