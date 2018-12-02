@@ -110,7 +110,7 @@ class SiteController extends Controller
                 foreach ($contactModel->department->receivers as $receiver)
                     $receivers[] = $receiver->email;
                 Mailer::mail($receivers, $subject, $body, $model->email);
-                Yii::app()->user->setFlash('success', '<b>THANK YOU!</b> We have received your request and will be in touch shortly.');
+                Yii::app()->user->setFlash('success', '<b>THANK YOU!</b><br>We have received your request and will be in touch shortly.');
                 $this->redirect($_POST['return']);
             }
         }

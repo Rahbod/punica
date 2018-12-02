@@ -36,8 +36,11 @@
     }
 }
 @media screen and (max-width: 768px){
+    .abs-alert{
+        width: 95%;
+    }
     .top-link{
-        display: none;
+        display: none !important;
     }
     #top{
         display: flex !important;
@@ -238,6 +241,13 @@
     #show-stone-modal .navigation .prev{
         left: 25px;
     }
+
+    #show-stone-modal .navigation .next{
+        right: 25px;
+    }
+    #show-stone-modal .navigation .prev{
+        left: 25px;
+    }
     section.height-auto{
         padding: 60px 15px;
     }
@@ -312,6 +322,9 @@
     }
 }
 @media screen and (max-width: 500px){
+    .header .nav li a{
+        width: 200px;
+    }
     #top .flex-inner{
         width: 100%;
     }
