@@ -34,7 +34,7 @@
     $cs->registerScriptFile($baseUrl.'/js/jquery.nicescroll.min.js', CClientScript::POS_END);
     $cs->registerScriptFile($baseUrl.'/js/owl.carousel.min.js', CClientScript::POS_END);
     $cs->registerScriptFile($baseUrl.'/js/jquery.script-mouse-wheel.js', CClientScript::POS_END);
-    $cs->registerScriptFile($baseUrl.'/js/jquery.script.js?5', CClientScript::POS_END);
+    $cs->registerScriptFile($baseUrl.'/js/jquery.script.js?10', CClientScript::POS_END);
     ?>
 </head>
 <body>

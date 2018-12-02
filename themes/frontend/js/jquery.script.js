@@ -1,8 +1,5 @@
 var animationRunning= false;
 $(function () {
-    $(document).on("mobileinit", function () {
-        $.mobile.ignoreContentEnabled=true;
-    });
     var gap = 0;
     if($(window).width() <= 768)
         gap = 60;

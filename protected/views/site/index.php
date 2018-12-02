@@ -114,7 +114,7 @@
             projects
             <span>next / 03</span>
         </a>
-        <a class="view-more" href="<?= $this->createUrl('/products/more') ?>">
+        <a class="view-more" data-enhance="false" href="<?= $this->createUrl('/products/more') ?>">
             <i class="grid-icon"></i>
             view more
         </a>
