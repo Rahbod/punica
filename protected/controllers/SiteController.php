@@ -83,24 +83,25 @@ class SiteController extends Controller
             $dep = ContactDepartment::model()->findByPk($contactModel->department_id);
             if ($model->validate() && $contactModel->save()) {
                 $siteName = Yii::app()->name;
-                $subject = 'وبسايت نسیم - پیغام در بخش ' . $dep->title . ($model->subject && !empty($model->subject) ? ' - ' . $model->subject : '');
+                $subject = 'Punica Stone - New ' . ucfirst($dep->title). ' Contact Message';
                 $body = "<div style='padding:15px;white-space: pre-line'>"
-                    . "<p>متن پیام:</p>"
+                    . "<p>Body:</p>"
                     . "<p>" . $model->body . "</p>"
                     . "<p>"
-                    . "<strong>نام فرستنده : </strong>" . $model->name . "<br>"
-                    . "<strong>شماره تماس : </strong>" . $model->tel
+                    . "<strong>Sender Name : </strong>" . $model->name . "<br>"
+                    . "<strong>Phone Number : </strong>" . $model->tel
                     . "</p><br><br>
-                    <p>"
-                    . "<strong>برای ارسال پاسخ روی لینک زیر کلیک کنید: </strong><br>" .
-                    CHtml::link(Yii::app()->createAbsoluteUrl('/contact/messages/view?id=' . $contactModel->id),
+                    <p>
+                    <strong>For reply click ".
+                    CHtml::link("here",
                         Yii::app()->createAbsoluteUrl('/contact/messages/view?id=' . $contactModel->id), array(
-                            'style' => 'color:#1aa4de;font-size:12px'
+                            'style' => 'color:#1aa4de;font-size:12px;text-decoration: underline;'
                         ))
-                    . "</p>
+                    ."</strong>
+                    </p>
                     <hr>
                     <span style='font-size:10px'>
-                    ارسال شده توسط وبسايت {$siteName}
+                    sent by punica stone.
                     </span>
                     </div>                  
                     ";
@@ -109,8 +110,8 @@ class SiteController extends Controller
                 foreach ($contactModel->department->receivers as $receiver)
                     $receivers[] = $receiver->email;
                 Mailer::mail($receivers, $subject, $body, $model->email);
-                Yii::app()->user->setFlash('success', 'باتشکر. پیغام شما با موفقیت ارسال شد.');
-                $this->refresh();
+                Yii::app()->user->setFlash('success', '<b>THANK YOU!</b> We have received your request and will be in touch shortly.');
+                $this->redirect($_POST['return']);
             }
         }
 

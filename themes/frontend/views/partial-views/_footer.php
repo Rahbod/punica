@@ -1,6 +1,6 @@
 <?php
 /** @var $this Controller */
-
+/** @var $form CActiveForm */
 $path = Yii::getPathOfAlias('webroot').'/uploads/map/';
 $url = Yii::app()->getBaseUrl(true).'/uploads/map/';
 $urlQr = Yii::app()->getBaseUrl(true).'/uploads/qr/';
@@ -49,25 +49,47 @@ $clearMobile=str_replace(array(' ', '[', ']'), '', $mobile);
                             <img src="<?= $urlQr.SiteSetting::getOption('qr_pic') ?>" class="qr-code">
                         </header>
                         <p id="content-form-error" class="label"></p>
-                        <form>
+                        <?php
+                        Yii::app()->getModule('contact');
+                        $model = new ContactForm();
+                        $form=$this->beginWidget('CActiveForm', array(
+                            'id'=>'contact-form',
+                            'action' => array('/contact'),
+                            'enableClientValidation'=>true,
+                            'clientOptions'=>array(
+                                'validateOnSubmit'=>true,
+                                'afterValidate' => 'js: function(form, data, hasError){
+                                    if(hasError)
+                                        $(".captcha-container a").click();
+                                    else
+                                        return true;
+                                }'
+                            ),
+                        )); ?>
+                            <input type="hidden" name="return" value="<?= Yii::app()->request->requestUri.'#contact' ?>">
                             <div class="left-box">
                                 <div class="row">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="first and last name">
+                                        <?php echo $form->textField($model,'name', array('class'=>'form-control','placeholder'=>'first and last name')) ?>
+                                        <?php echo $form->error($model,'name') ?>
                                     </div>
                                     <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="e-mail">
+                                        <?php echo $form->emailField($model,'email', array('class'=>'form-control','placeholder'=>'e-mail')) ?>
+                                        <?php echo $form->error($model,'email') ?>
                                     </div>
                                     <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="phone number">
+                                        <?php echo $form->telField($model,'tel', array('class'=>'form-control','placeholder'=>'phone number')) ?>
+                                        <?php echo $form->error($model,'tel') ?>
                                     </div>
                                     <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="unit">
+                                        <?php echo $form->dropDownList($model,'department_id', CHtml::listData(ContactDepartment::model()->findAll(array('order'=>'id')),'id','title'),array('class'=>'form-control select-picker','placeholder'=>'unit')) ?>
+                                        <?php echo $form->error($model,'department_id') ?>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="form-group full">
-                                        <textarea  class="form-control" placeholder="YOUR TEXT"></textarea>
+                                        <?php echo $form->textArea($model,'body', array('class'=>'form-control','placeholder'=>'your text')) ?>
+                                        <?php echo $form->error($model,'body') ?>
                                     </div>
                                 </div>
                             </div>
@@ -77,7 +99,7 @@ $clearMobile=str_replace(array(' ', '[', ']'), '', $mobile);
                                     <span><i class="icon icon-chevron-right"></i></span>
                                 </button>
                             </div>
-                        </form>
+                        <?php $this->endWidget() ?>
                     </div>
                 </div>
             </div>
@@ -107,3 +129,5 @@ $clearMobile=str_replace(array(' ', '[', ']'), '', $mobile);
             </span>
     </div>
 </section>
+
+<?php $this->renderPartial('//partial-views/_flashMessage', array('class' => 'abs-alert'))?>

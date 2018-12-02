@@ -27,23 +27,24 @@ class ContactForm extends CFormModel
 		return array(
 			array('name, tel, body, email, department_id', 'required'),
 			array('tel', 'numerical', 'integerOnly'=>true),
-			array('tel', 'length', 'max'=>11),
+			array('tel', 'length', 'max'=>13),
+			array('tel', 'length', 'min'=>11),
             array('email','email'),
             array('subject','filter','filter'=>'strip_tags'),
-            array('verifyCode', 'captcha', 'allowEmpty' => !CCaptcha::checkRequirements()),
+//            array('verifyCode', 'captcha', 'allowEmpty' => !CCaptcha::checkRequirements()),
 		);
 	}
 
 	public function attributeLabels()
 	{
 		return array(
-			'name' => 'نام و نام خانوادگی',
-			'email' => 'پست الکترونیک',
-			'tel' => 'شماره تماس',
-			'subject' => 'موضوع',
-			'body' => 'متن پیام',
-			'department_id' => 'بخش مورد نظر',
-			'verifyCode'=>'کد امنیتی',
+			'name' => 'First and last name',
+			'email' => 'E-mail',
+			'tel' => 'Phone number',
+			'subject' => 'Subject',
+			'body' => 'Your Text',
+			'department_id' => 'Unit',
+			'verifyCode'=>'verify code',
 		);
 	}
 }

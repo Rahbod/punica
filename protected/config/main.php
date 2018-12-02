@@ -7,7 +7,7 @@ return array(
 	'timeZone' => 'Asia/Tehran',
 	'theme' => 'abound',
 	'sourceLanguage' => '00',
-	'language' => 'fa_ir',
+	'language' => 'en',
 	// preloading 'log' component
 	'preload'=>array('log','userCounter'),
 
