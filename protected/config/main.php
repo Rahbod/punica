@@ -1,7 +1,5 @@
 <?php
 return array(
-//	'onBeginRequest'=>create_function('$event', 'return ob_start("ob_gzhandler");'),
-//	'onEndRequest'=>create_function('$event', 'return ob_end_flush();'),
 	'basePath' => dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name'=>'Punica',
 	'timeZone' => 'Asia/Tehran',
@@ -121,7 +119,7 @@ return array(
 			),
 		),
 		'clientScript'=>array(
-//			'class'=>'ext.minScript.components.ExtMinScript',
+			'class'=>'ext.minScript.components.ExtMinScript',
 			'coreScriptPosition' => CClientScript::POS_HEAD,
 			'defaultScriptFilePosition' => CClientScript::POS_END,
 		),
