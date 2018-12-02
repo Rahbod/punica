@@ -36,6 +36,9 @@
     }
 }
 @media screen and (max-width: 768px){
+    .top-link{
+        display: none;
+    }
     #top{
         display: flex !important;
     }

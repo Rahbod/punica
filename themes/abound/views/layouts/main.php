@@ -10,6 +10,7 @@
     <meta name="description" content="<?= strip_tags($this->description) ?>">
     <meta name="author" content="Rahbod Developing Software Co">
     <meta name="csrf-token" content="<?= Yii::app()->request->csrfToken ?>" />
+    <link rel="shortcut icon" href="<?php echo Yii::app()->theme->baseUrl.'/img/favicon.png';?>">
 
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
