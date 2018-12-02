@@ -216,7 +216,7 @@ $(function () {
         $(this).find(".next").trigger("click");
     }).on("swiperight",function(){
         $(this).find(".prev").trigger("click");
-    });;
+    });
 
     $(document).on('scroll',function(e){
         $('section').each(function() {

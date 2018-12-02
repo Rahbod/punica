@@ -29,7 +29,7 @@
     $cs->registerCssFile($baseUrl.'/css/bootstrap-theme.css?'.time());
     $cs->registerCssFile($baseUrl.'/css/responsive-theme.css?4');
 
-    $cs->registerScriptFile($baseUrl.'/js/jquery.mobile-1.4.5.min.js', CClientScript::POS_END);
+    $cs->registerScriptFile($baseUrl.'/js/jquery.mobile.custom.min.js', CClientScript::POS_END);
     $cs->registerScriptFile($baseUrl.'/js/bootstrap.min.js', CClientScript::POS_END);
     $cs->registerScriptFile($baseUrl.'/js/jquery.nicescroll.min.js', CClientScript::POS_END);
     $cs->registerScriptFile($baseUrl.'/js/owl.carousel.min.js', CClientScript::POS_END);
