@@ -10,6 +10,7 @@ html{
     font-family: "Open Sans";
 }
 body {
+    overflow-x: hidden !important;
     font-family: "Open Sans";
     font-size: 13px;
     background-color: #030000;
@@ -533,9 +534,13 @@ section.height-auto{
     text-align: left;
 }
 
+#show-stone-modal{
+    overflow: hidden;
+}
 #show-stone-modal .modal-dialog{
     margin: 0;
     display: block;
+    overflow: hidden;
     height: 100vh;
     width: 100%;
     background-color: rgba(0,0,0,0.8);
@@ -1412,6 +1417,7 @@ section.height-auto .navigation .navigation-link.navigation-top:after{
     top: 0;
     z-index: 1000;
     left: 50%;
+    max-width: 100%;
     -webkit-transform: translate(-50%, 0);
     -moz-transform: translate(-50%, 0);
     -ms-transform: translate(-50%, 0);
@@ -1514,4 +1520,7 @@ section.height-auto .navigation .navigation-link.navigation-top:after{
     transform: scaleX(1);
     -webkit-transform-origin: 0 100%;
     transform-origin: 0 100%;
+}
+.ui-loader{
+    display: none !important;
 }

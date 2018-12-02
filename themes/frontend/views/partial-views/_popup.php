@@ -2,7 +2,6 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-body">
-                <?= $this->renderPartial('//partial-views/_loading') ?>
                 <div class="image-box">
                     <div class="navigation">
                         <a href="#" class="next"></a>

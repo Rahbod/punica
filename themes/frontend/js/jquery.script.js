@@ -1,5 +1,8 @@
 var animationRunning= false;
 $(function () {
+    $(document).on("mobileinit", function () {
+        $.mobile.ignoreContentEnabled=true;
+    });
     var gap = 0;
     if($(window).width() <= 768)
         gap = 60;
@@ -212,7 +215,11 @@ $(function () {
 
     $("#show-stone-modal").on("hide.bs.modal", function () {
         $('body, html').removeClass("overflow-fix");
-    });
+    }).on("swipeleft",function(){
+        $(this).find(".next").trigger("click");
+    }).on("swiperight",function(){
+        $(this).find(".prev").trigger("click");
+    });;
 
     $(document).on('scroll',function(e){
         $('section').each(function() {
@@ -224,6 +231,12 @@ $(function () {
                 history.replaceState(null, null, ('#'+$(this).attr('id')));
             }
         });
+    });
+
+    $(".owl-stage").on("swipeleft",function(){
+        $(this).parent().find(".next").trigger("click");
+    }).on("swiperight",function(){
+        $(this).parent().find(".prev").trigger("click");
     });
 });
 

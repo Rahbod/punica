@@ -129,5 +129,3 @@ $clearMobile=str_replace(array(' ', '[', ']'), '', $mobile);
             </span>
     </div>
 </section>
-
-<?php $this->renderPartial('//partial-views/_flashMessage', array('class' => 'abs-alert'))?>

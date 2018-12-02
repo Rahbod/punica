@@ -34,7 +34,7 @@
     $cs->registerScriptFile($baseUrl.'/js/jquery.nicescroll.min.js', CClientScript::POS_END);
     $cs->registerScriptFile($baseUrl.'/js/owl.carousel.min.js', CClientScript::POS_END);
     $cs->registerScriptFile($baseUrl.'/js/jquery.script-mouse-wheel.js', CClientScript::POS_END);
-    $cs->registerScriptFile($baseUrl.'/js/jquery.script.js', CClientScript::POS_END);
+    $cs->registerScriptFile($baseUrl.'/js/jquery.script.js?5', CClientScript::POS_END);
     ?>
 </head>
 <body>
@@ -53,6 +53,7 @@
     <?php echo $content;?>
     <?php $this->renderPartial('//partial-views/_footer') ?>
 </div>
+<?php $this->renderPartial('//partial-views/_flashMessage', array('class' => 'abs-alert'))?>
 <?php $this->renderPartial('//partial-views/_popup') ?>
 </body>
 </html>

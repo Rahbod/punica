@@ -165,7 +165,6 @@ class Controller extends AuthController
                     'submenuOptions' => array('class' => 'treeview-menu'),
                     'items' => array(
                         array('label' => '<i class="fa fa-circle-o"></i>عمومی', 'url' => Yii::app()->createUrl('/setting/manage/changeSetting')),
-                        array('label' => '<i class="fa fa-circle-o"></i>نقشه گوگل', 'url' => Yii::app()->createUrl('/map/manage/update/1')),
                         array('label' => '<i class="fa fa-circle-o"></i>شبکه های اجتماعی', 'url' => Yii::app()->createUrl('/setting/manage/socialLinks')),
                     )
                 ),
