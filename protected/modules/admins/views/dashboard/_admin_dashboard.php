@@ -16,6 +16,31 @@ if(Yii::app()->user->roles == 'admin'){
 <div class="row boxed-statistics">
     <div class="col-md-3 col-xs-6">
         <!-- small box -->
+        <div class="small-box bg-orange">
+            <div class="inner">
+                <h3><?php echo $statistics['products'];?></h3>
+                <p>محصولات</p>
+            </div>
+            <div class="icon">
+                <i class="ion ion-ios-box"></i>
+            </div>
+            <a href="<?php echo $this->createUrl('/products/manage/admin');?>" class="small-box-footer">مدیریت <i class="fa fa-arrow-circle-left"></i></a>
+        </div>
+    </div>
+    <div class="col-md-3 col-xs-6">
+        <div class="small-box bg-green-active">
+            <div class="inner">
+                <h3><?php echo $statistics['projects'];?></h3>
+                <p>پروژه ها</p>
+            </div>
+            <div class="icon">
+                <i class="ion ion-paper-airplane"></i>
+            </div>
+            <a href="<?php echo $this->createUrl('/projects/manage/admin');?>" class="small-box-footer">مدیریت <i class="fa fa-arrow-circle-left"></i></a>
+        </div>
+    </div>
+    <div class="col-md-3 col-xs-6">
+        <!-- small box -->
         <div class="small-box bg-maroon">
             <div class="inner">
                 <h3><?php echo $statistics['messages'];?></h3>

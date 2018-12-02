@@ -22,17 +22,17 @@
     Yii::app()->clientScript->registerCoreScript('jquery');
 
     $cs->registerCssFile($baseUrl.'/css/bootstrap.min.css');
-    $cs->registerCssFile($baseUrl.'/css/font-awesome.css?3'.time());
-    $cs->registerCssFile($baseUrl.'/css/owl.carousel.min.css?3'.time());
-    $cs->registerCssFile($baseUrl.'/css/owl.theme.default.min.css?3'.time());
-    $cs->registerCssFile($baseUrl.'/css/open-sans.css?3'.time());
-    $cs->registerCssFile($baseUrl.'/css/bootstrap-theme.css?3'.time());
-    $cs->registerCssFile($baseUrl.'/css/responsive-theme.css?3'.time());
+    $cs->registerCssFile($baseUrl.'/css/font-awesome.css');
+    $cs->registerCssFile($baseUrl.'/css/owl.carousel.min.css');
+    $cs->registerCssFile($baseUrl.'/css/owl.theme.default.min.css');
+    $cs->registerCssFile($baseUrl.'/css/open-sans.css');
+    $cs->registerCssFile($baseUrl.'/css/bootstrap-theme.css');
+    $cs->registerCssFile($baseUrl.'/css/responsive-theme.css');
 
     $cs->registerScriptFile($baseUrl.'/js/bootstrap.min.js', CClientScript::POS_END);
     $cs->registerScriptFile($baseUrl.'/js/jquery.nicescroll.min.js', CClientScript::POS_END);
     $cs->registerScriptFile($baseUrl.'/js/owl.carousel.min.js', CClientScript::POS_END);
-    $cs->registerScriptFile($baseUrl.'/js/jquery.script.js?3'.time(), CClientScript::POS_END);
+    $cs->registerScriptFile($baseUrl.'/js/jquery.script.js', CClientScript::POS_END);
     ?>
 </head>
 <body class="no-wheel">

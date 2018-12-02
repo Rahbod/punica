@@ -6,7 +6,7 @@ Yii::app()->clientScript->registerScript('resetForm','document.getElementById("a
 ?>
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'admins-form',
-	'enableAjaxValidation'=>true,
+	'enableAjaxValidation'=>false,
 
 )); ?>
     <div class="message"></div>

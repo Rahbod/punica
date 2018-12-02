@@ -79,6 +79,15 @@
     #contact .navigation .navigation-top{
         left: 0;
     }
+    .top-link{
+        display: block;
+        width: 100%;
+        padding-right: 0;
+    }
+    .top-link > div{
+        margin-top: 15px;
+        float: right;
+    }
     .contact-form .inner-box .form-group{
         width: 50%;
     }

@@ -60,7 +60,6 @@ $('.search-form form').submit(function(){
 				'pagerCssClass' => 'blank',
 				'columns'=>array(
 					'email',
-					'subject',
 					array(
 						'name' => 'department_id',
 						'value' => '$data->department->title',

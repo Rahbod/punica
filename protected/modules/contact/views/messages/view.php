@@ -35,11 +35,13 @@ $this->menu=array(
                         'name',
                         'email',
                         'tel',
-                        'subject',
-                        'body',
                         array(
                             'name' => 'reply',
                             'value' => $model->replyLabels[$model->reply]
+                        ),
+                        array(
+                            'name' => 'body',
+                            'value' => $model->body
                         )
                     )
                 )); ?>

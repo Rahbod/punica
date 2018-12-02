@@ -33,6 +33,8 @@ class AdminsDashboardController extends Controller
 
         $statistics = [
             'messages' => ContactMessages::model()->count($messagesCriteria),
+            'products' => Products::model()->count(Products::validQuery()),
+            'projects' => Projects::model()->count(Projects::validQuery()),
         ];
 
         $this->render('index', compact('statistics'));

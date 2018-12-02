@@ -165,8 +165,8 @@ class Pages extends CActiveRecord
 
     public function getKeywords()
     {
-//        $tags = CHtml::listData($this->tags, 'title', 'title');
-//        return implode(',', $tags);
+        $tags = CHtml::listData($this->tags, 'title', 'title');
+        return implode(',', $tags);
     }
 
     public function getDescription()
