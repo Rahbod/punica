@@ -36,6 +36,28 @@
     }
 }
 @media screen and (max-width: 768px){
+    .about-box{
+        position: relative;
+    }
+    .about-box .about-image,
+    .about-box .logo-title{
+        float: left;
+        height: 30vh;
+    }
+    .about-box .about-image{
+        width: 40%;
+    }
+    .about-box .logo-title{
+        position: absolute;
+        width: 60%;
+        right: 15px;
+        top: 50%;
+        -webkit-transform: translateY(50%);
+        -moz-transform: translateY(50%);
+        -ms-transform: translateY(50%);
+        -o-transform: translateY(50%);
+        transform: translateY(50%);
+    }
     .abs-alert{
         width: 95%;
     }
@@ -322,6 +344,9 @@
     }
 }
 @media screen and (max-width: 500px){
+    #top .logo{
+        width: 80%;
+    }
     .header .nav li a{
         width: 200px;
     }

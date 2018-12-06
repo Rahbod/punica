@@ -26,8 +26,8 @@
     $cs->registerCssFile($baseUrl.'/css/owl.carousel.min.css');
     $cs->registerCssFile($baseUrl.'/css/owl.theme.default.min.css');
     $cs->registerCssFile($baseUrl.'/css/open-sans.css');
-    $cs->registerCssFile($baseUrl.'/css/bootstrap-theme.css?'.time());
-    $cs->registerCssFile($baseUrl.'/css/responsive-theme.css?4');
+    $cs->registerCssFile($baseUrl.'/css/bootstrap-theme.css?5'.time());
+    $cs->registerCssFile($baseUrl.'/css/responsive-theme.css?5');
 
     $cs->registerScriptFile($baseUrl.'/js/jquery.mobile.custom.min.js', CClientScript::POS_END);
     $cs->registerScriptFile($baseUrl.'/js/bootstrap.min.js', CClientScript::POS_END);

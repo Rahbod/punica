@@ -18,9 +18,19 @@ if($model->value)
             'enableClientValidation' => true,
         ));
         ?>
-        <div class="form-group">
-            <?php echo CHtml::label('لینک واتس اپ',''); ?>
-            <?php echo CHtml::textField("SiteSetting[social_links][whatsapp]",($social_links && isset($social_links['whatsapp'])?$social_links['whatsapp']:''),array('size'=>60,'class'=>'form-control text-left ltr')); ?>
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                <div class="form-group">
+                    <?php echo CHtml::label('لینک واتس اپ',''); ?>
+                    <?php echo CHtml::textField("SiteSetting[social_links][whatsapp]",($social_links && isset($social_links['whatsapp'])?$social_links['whatsapp']:''),array('size'=>60,'class'=>'form-control text-left ltr')); ?>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                <div class="form-group">
+                    <?php echo CHtml::label('شماره تلفن واتس اپ',''); ?>
+                    <?php echo CHtml::textField("SiteSetting[social_links][whatsapp_number]",($social_links && isset($social_links['whatsapp_number'])?$social_links['whatsapp_number']:''),array('size'=>60,'class'=>'form-control text-left ltr')); ?>
+                </div>
+            </div>
         </div>
         <div class="form-group">
             <?php echo CHtml::label('لینک فیسبوک',''); ?>

@@ -41,11 +41,15 @@
         <div class="flex-col">
             <div class="about-box order1">
                 <div class="about-image"></div>
+                <h4 class="logo-title visible-xs">
+                    Punica
+                    <small>Stone</small>
+                </h4>
             </div>
             <div class="about-box order2">
                 <div class="flex flex-left">
                     <div class="flex-inner">
-                        <h4 class="logo-title">
+                        <h4 class="logo-title hidden-xs">
                             Punica
                             <small>Stone</small>
                         </h4>

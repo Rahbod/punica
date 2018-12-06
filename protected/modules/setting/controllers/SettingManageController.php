@@ -130,7 +130,7 @@ class SettingManageController extends Controller
             foreach ($_POST['SiteSetting']['social_links'] as $key => $link) {
                 if ($link == '')
                     unset($_POST['SiteSetting']['social_links'][$key]);
-                elseif ($key!='social_phone' && !preg_match("~^(?:f|ht)tps?://~i", $link))
+                elseif ($key!='social_phone' && strpos($key, '_number') === false && !preg_match("~^(?:f|ht)tps?://~i", $link))
                     $_POST['SiteSetting']['social_links'][$key] = 'http://' . $_POST['SiteSetting']['social_links'][$key];
             }
             if ($_POST['SiteSetting']['social_links'])
